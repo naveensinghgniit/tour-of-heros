@@ -1,3 +1,5 @@
+import { HEROES } from './../shared/mock-heroes';
+import { Hero } from './../shared/hero';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
+  // single data bind
+  // hero: Hero = {
+  //   id: 1,
+  //   name: 'stromwind',
+  //   detail: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In minus quae numquam deleniti tenetur dolores! Ducimus possimus, officia minima sapiente dolores unde delectus doloribus in sed id accusantium quis aliquid?'
+  // }
+
+  // data bind from model(mock-heroes)
+  heroes = HEROES;
+  selectedHero: Hero;
+
+  onSelect(heroFromList: Hero): void  {
+    this.selectedHero = heroFromList;
+  }
   constructor() { }
 
   ngOnInit() {
