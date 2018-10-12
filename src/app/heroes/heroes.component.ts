@@ -1,5 +1,5 @@
 import { HeroService } from './../shared/hero.service';
-// import { HEROES } from './../shared/mock-heroes';
+// import { HEROES } from './../shared/mock-heroes'; // removed for service calling data is injected by DI
 import { Hero } from './../shared/hero';
 import { Component, OnInit } from '@angular/core';
 
@@ -18,7 +18,7 @@ export class HeroesComponent implements OnInit {
   // }
 
   // data bind from model(mock-heroes)
-  // heroes = HEROES;
+  // heroes = HEROES; // removed for service calling data is injected by DI
   heroes: Hero[];
   selectedHero: Hero;
 
